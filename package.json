@@ -1,0 +1,23 @@
+{
+	"name": "nodejwt_example",
+	"version": "1.0.0",
+	"description": "nodejs api auth with jwt",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon app.js"
+	},
+	"keywords": [
+		"nodejs",
+		"jwt",
+		"auth"
+	],
+	"author": "foushware [ahmed fouad ]",
+	"license": "ISC",
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"jsonwebtoken": "^8.5.1"
+	}
+}
