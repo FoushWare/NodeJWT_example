@@ -44,8 +44,23 @@ app.get('/api', (req, res) => {
     });
 });
 
-//create the route to protect 
+//create the route which we wanna  protect 
 app.post('/api/posts', verifyToken, (req, res) => {
+
+    jwt.verify(req.token, 'secretkey', (err, authData) => {
+        if (err) {
+            res.sendStatus(403);
+        } else {
+            res.json({
+                message: "post created ...",
+                authData
+
+            });
+        }
+
+
+    });
+
     res.json({
         message: 'Post created...'
     });
